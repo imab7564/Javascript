@@ -1,3 +1,5 @@
+// JavaScript is a dynamically typed language. This means that you don't need to specify the data type of a variable when you declare it.
+
 //stack(Primitive data k sath use hota h)
 //=> jab v stack memory use hota h to jo v variable declare karte ho uska ek copy milta h
 //heap(non primitive data k sath use hota h)
