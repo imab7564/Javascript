@@ -61,7 +61,7 @@ console.log(this);//{} -->when u are in the node environment then this refers to
 // chai()
 
 //Now discuss about Arrow fn:
-//Basic Arrow fn
+//Basic Arrow fn --> Syntax:()=>{}
 // const addTwo= (num1,num2) =>{
 //     return num1+num2
 // }
