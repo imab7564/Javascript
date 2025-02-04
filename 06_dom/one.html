@@ -14,8 +14,107 @@
 </head>
 <body class="bg-black">
     <div >
-        <h1 id="title" class="heading">DOM learning on chai aur code</h1>
+        <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text</span></h1>
+        <h2 class="list-item">Lorem ipsum dolor sit.</h2>
+        <h2 class="list-item">Lorem ipsum dolor sit.</h2>
+        <h2 class="list-item">Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
     </div>
 </body>
 </html>
+
+<!-- koi v element target karna h to sabse document.getElementById('title')
+
+ document.getElementById('title').id
+:'title'
+
+document.getElementById('title').className
+:'heading'
+document.getElementById('title').getAttribute('class')
+:'heading'
+document.getElementById('title').getAttribute('id')
+:'title'
+document.getElementById('title').setAttribute('class','test heading'),ye hmesha overwrite karta h ab class ka naam 'test heading'ho gya hoga 
+:undefined
+
+const title=document.getElementById('title')
+:undefined
+
+title
+:<h1 id=​"title" class=​"test heading">​DOM learning on chai aur code​</h1>​
+
+title.style.backgroundColor='green'
+:'green' ye green kar dega 
+
+title.style.padding='10px'
+:'10px' ye padding de dega
+
+title.style.borderRadius='10px'
+:'10px' ye border radius de dega
+
+Diff between innerText,innerHTML,textContent:
+
+title.textContent
+:'DOM learning on chai aur code test text'
+iske andar wo h jo nahi v dikhta h 
+
+title.innerHTML
+:'DOM learning on chai aur code <span style="display: none;">test text</span>'
+ye to pura HTML de deta h 
+
+title.innerText
+:'DOM learning on chai aur code'
+iske andar wo h jo visible h
+
+Query selector:ye first bala query ko selct kar lega 
+document.querySelector('h2'):to agar bhut sara h2 tag h to first bala h2 tag ko point karta h 
+'.' se hmlog class ko call karte h
+'#' se hmlog id ko call karte h
+
+document.querySelector('ul')
+:<ul>​…​</ul>​
+const myUl=document.querySelector('ul')
+:undefined
+const turnGreen=myUl.querySelector('li')
+:undefined ye first list ko target karega
+turnGreen.style.backgroundColor='green'
+:'green' ye first list ko green kar dega 
+turnGreen.innerText='five'
+
+Query selector all:ye nodelist deta h agar ek v element h to ye nodelist k form me deta h to usko access karne k liye nodelist[0] karna padega 
+e.g
+myH1[0].style.color='green'
+:'green' ye green kar dega h1 tag bale ko
+
+const tempList=document.querySelectorAll('li')
+:undefined
+
+tempList
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]:
+
+tempList.forEach(function(item){
+    item.style.backgroundColor='green'
+})
+:undefined ye sare item ko green kar dega
+
+
+getElementByClassName:ye html collection deta h that's why hmlog forEach use nahi karte h to usko convert karna padta h array me 
+
+const tempList=document.getElementsByClassName('list-item')
+:undefined
+
+Array.from(tempList)
+:ye convert kar dega array me
+
+const myConvertedArray=Array.from(tempList)
+undefined ab ispar for each bagerah laga sakte h
+
+myConvertedArray.forEach(function(item){
+    item.style.color='orange'
+}) -->
