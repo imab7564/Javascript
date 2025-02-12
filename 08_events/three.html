@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    //setInterval kisi v chij ko baar baar execute karta h unlike setTimeout jo ki sirf ek baar karta h 
+    const sayDate=function(str){
+        console.log(str,Date.now().toString());
+    }
+    const intervalId=setInterval(sayDate,1000,"hi")//third parameter is srgument for the function
+    clearInterval(intervalId)
+</script>
+</html>
