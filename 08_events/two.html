@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(function(){
+        console.log("Abhishek");
+    },2000)
+    //setTimout kisi v chij ko ek baar execute karta h isko do chij chahiye one is handler(function without name) and other is time in milliseconds
+
+    //another way just give reference of the function not execute the function
+    const sayAb=function(){
+        console.log("Abhishek");
+    }
+    
+    setTimeout(sayAb,2000)
+    //how to change the "chai aur code" to "Best JS series"
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="Best JS series" 
+    }
+    const changeMe=setTimeout(changeText,2000)
+
+    //clearTimout ko chahiye reference kis setTimout ko rokna h
+    
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("stopped");
+    }) 
+    
+</script>
+</html>
